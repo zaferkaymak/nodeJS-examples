@@ -27,8 +27,8 @@ let startNumber = 0;
 const interval = setInterval(()=>{
     startNumber++;
     firstFunction(0,secondFunction);
-    console.log("Run: " + startNumber);
     if(startNumber === 4){
         clearInterval(interval);
     }
+    console.log("Run: " + startNumber);
 },4000);
