@@ -1,4 +1,4 @@
-// Call Function example
+// Callback Function example
 
 const firstFunction = (count,callback) => {
     setTimeout(() => {
@@ -23,4 +23,7 @@ const thirdFunction = (count) => {
     },1000);
 }
 
-firstFunction(0,secondFunction);
+setInterval(()=>{
+    firstFunction(0,secondFunction);
+    console.log("Restarting");
+},4000);
