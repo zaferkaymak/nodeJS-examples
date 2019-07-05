@@ -23,7 +23,12 @@ const thirdFunction = (count) => {
     },1000);
 }
 
-setInterval(()=>{
+let startNumber = 0;
+const interval = setInterval(()=>{
+    startNumber++;
     firstFunction(0,secondFunction);
-    console.log("Restarting");
+    console.log("Run: " + startNumber);
+    if(startNumber === 4){
+        clearInterval(interval);
+    }
 },4000);
