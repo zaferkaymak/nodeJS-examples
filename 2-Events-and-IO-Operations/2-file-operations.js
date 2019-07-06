@@ -6,3 +6,10 @@ fs.readFile(`${__dirname}/loremipsum.txt`, (error, data) => {
         console.log(data.toString());
 });
 
+// When you use the appendFile, you can append a new text in the file.
+fs.writeFile('test.txt', 'Hello World! \n', (error) => {
+    if(error)
+        throw error;
+    console.log("New text was added");
+});
+
