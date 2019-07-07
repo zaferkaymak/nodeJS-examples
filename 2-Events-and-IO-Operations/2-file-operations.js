@@ -13,3 +13,8 @@ fs.writeFile('test.txt', 'Hello World! \n', (error) => {
     console.log("New text was added");
 });
 
+fs.unlink('test.txt', (error) => {
+    if(error)
+        throw error;
+    console.log("File was deleted");
+});
