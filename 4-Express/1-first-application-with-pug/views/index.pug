@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Express first Application
-    body
+extends layout
+block content
+    div.main-area
+        - var welcomeMessage = 'Welcome to Home Page'
         h1
-            | Welcome to Home Page
+            | #{name} #{surname} 
+        h2
+            =welcomeMessage
+        ul
+            span Friend list:
+            each val, index in friends
+                li= index + ': ' + val
+    //- Footer Component
+    include components/footer
