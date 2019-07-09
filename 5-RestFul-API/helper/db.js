@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 module.exports = () => {
     mongoose.connect('mongodb+srv://movie-user:asd123@cluster0-pby7z.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true});
-    
+    mongoose.set('useFindAndModify', false);
+
     mongoose.connection.on('open', () => {
         console.log('MongoDB connected');
     });
