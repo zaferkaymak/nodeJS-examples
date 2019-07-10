@@ -20,18 +20,18 @@ const userFriendList = [
 const getUser = () => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
-            resolve(userInfo)
+            resolve(userInfo);
         },500);
-    })
-}
+    });
+};
 
 const getFriend = (userID) => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
-            resolve(userFriendList)
+            resolve(userFriendList);
         },1000);
-    })
-}
+    });
+};
 
 // Promise Chain
 getUser()

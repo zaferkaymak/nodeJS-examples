@@ -11,5 +11,5 @@ module.exports = (app) => {
             message: err.message,
             status: err.status
         });
-    })
+    });
 }
