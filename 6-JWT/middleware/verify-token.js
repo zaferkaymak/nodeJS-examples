@@ -6,6 +6,7 @@ module.exports = (req,res,next) => {
     if(token){
         jwt.verify(token, req.app.get('api_secret_key'), (err, decoded) => {
             if(err) {
+                res.status(500);
                 res.json({
                     status:false,
                     message: 'Failed to authenticate token'
@@ -16,6 +17,7 @@ module.exports = (req,res,next) => {
             }
         });
     }else {
+        res.status(500);
         res.json({
             status:false,
             message: 'Token is not defined'
