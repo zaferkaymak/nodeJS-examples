@@ -92,14 +92,7 @@ router.post('/', (req, res) => { // Movie create function.
 		year: year,
 		country: country
 	});
-	// movie.save((err,data) => {
-	// 	if(err)
-	// 		res.json(err);
-	// 	res.json({
-	// 		status: 200
-	// 	});
-	// });
-
+	
 	movie.save()
 		.then((data) => {
 			res.json({

@@ -11,7 +11,6 @@ router.get('/', (req, res, next) => {
 
 router.post('/register', (req, res, next) => {
 	const {username, password} = req.body;
-
 	bcrypt.hash(password, 10).then((hash) => {
 		
 		const user = new Users({
